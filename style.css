@@ -186,7 +186,7 @@ body.dark-theme .theme-toggle-button ion-icon[name="moon"] {
     font-size: 1rem;
 }
 
-.edit-button, .delete-button {
+.edit-button, .delete-button, .done-button {
     background: none;
     border: none;
     cursor: pointer;
@@ -227,17 +227,6 @@ body.dark-theme .theme-toggle-button ion-icon[name="moon"] {
 
 .delete-all-button:hover {
     background-color: #c82333;
-}
-
-.done-button {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-left: 0.5rem;
 }
 
 .done-button:hover {
