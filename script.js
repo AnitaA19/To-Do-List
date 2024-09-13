@@ -6,6 +6,7 @@ const toDoList = document.querySelector('.tasks-list');
 const emptyList = document.querySelector('.empty-list');
 const scoreElement = document.querySelector('.score');
 const themeToggleButton = document.querySelector('.theme-toggle-button'); 
+const deleteAllButton = document.querySelector('.delete-all-button'); 
 
 let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 let editingTaskId = null; 
@@ -18,7 +19,7 @@ function renderTasks() {
     toDoList.innerHTML = '';
     tasks.forEach(task => {
         let html = `
-        <li class="task-list-item" data-id="${task.id}">
+        <li class="task-list-item ${task.done ? 'done' : ''}" data-id="${task.id}">
             <div class="task-content">
                 <p class="task-text">${task.text}</p>
             </div>
@@ -28,6 +29,9 @@ function renderTasks() {
                 </button>
                 <button class="delete-button">
                     <ion-icon class="delete-btn" name="trash-outline"></ion-icon>
+                </button>
+                <button class="done-button">
+                    <ion-icon class="done-btn" name="checkmark-outline"></ion-icon>
                 </button>
             </div>
         </li>`;    
@@ -92,7 +96,8 @@ addTaskBtn.addEventListener('click', function(e) {
     } else {
         const newTask = {
             id: Date.now(), 
-            text: taskValue
+            text: taskValue,
+            done: false
         };
         tasks.push(newTask);
     }
@@ -122,7 +127,17 @@ toDoList.addEventListener('click', function(e) {
         tasks = tasks.filter(task => task.id != itemId);
         saveTasks();
         renderTasks();
+    } else if (target.classList.contains('done-button')) {
+        tasks = tasks.filter(task => task.id != itemId);
+        saveTasks();
+        renderTasks();
     }
+});
+
+deleteAllButton.addEventListener('click', function() {
+    tasks = [];
+    saveTasks();
+    renderTasks();
 });
 
 themeToggleButton.addEventListener('click', function() {
