@@ -138,6 +138,7 @@ deleteAllButton.addEventListener('click', function() {
     if (confirm('Are you sure you want to delete all tasks?')) {
         tasks = [];
         saveTasks();
+        taskInput.value = ''; 
         renderTasks();
     }
 });
