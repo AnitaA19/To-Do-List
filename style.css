@@ -1,0 +1,217 @@
+* {  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+    margin: 0;
+    background-color: #f0f0f0; 
+}
+
+body.light-theme {
+    background-color: #f0f0f0;
+    color: #000000;
+}
+
+body.light-theme .to-do-container {
+    background-color: rgb(243, 226, 205);
+}
+
+body.light-theme .task-list-item {
+    background-color: rgba(248, 248, 248, 0.8);
+}
+
+body.light-theme .edit-button ion-icon {
+    color: #ffc107;
+}
+
+body.light-theme .delete-button ion-icon {
+    color: #dc3545;
+}
+
+body.dark-theme {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+body.dark-theme .to-do-container {
+    background-color: #444444;
+}
+
+body.dark-theme .task-list-item {
+    background-color: #555555;
+}
+
+body.dark-theme .edit-button ion-icon {
+    color: #ffb300;
+}
+
+body.dark-theme .delete-button ion-icon {
+    color: #e57373;
+}
+
+.theme-toggle-container {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.theme-toggle-button {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.theme-toggle-button:hover {
+    background-color: #f0f0f0;
+    border-color: #bbb;
+}
+
+.theme-toggle-button ion-icon {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+body.light-theme .theme-toggle-button ion-icon[name="sunny"] {
+    display: none;
+}
+
+
+body.dark-theme .theme-toggle-button ion-icon[name="moon"] {
+    display: none;
+}
+
+.to-do-container {
+    padding: 1rem;
+    background-color: rgb(243, 226, 205);
+    text-align: center;
+    margin-bottom: 0.2rem;
+}
+
+.notebook-img {
+    width: 3rem;
+}
+
+.to-do-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.add-text {
+    background-color: rgba(252, 251, 210, 0.5);
+    padding: 0.4rem;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.add-task {
+    margin-bottom: 2rem;
+}
+
+.add-task-form {
+    margin-bottom: 2rem;
+}
+
+.add-form {
+    display: flex;
+    justify-content: center;
+}
+
+.task-input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.4rem;
+    outline: none;
+}
+
+.add-task-button {
+    padding: 0.5rem;
+    margin-left: 0.8rem;
+    font-size: 1rem;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-task-button:hover {
+    background-color: #4cae4c;
+}
+
+.to-do-list {
+    padding: 1rem;
+}
+
+.tasks-list {
+    list-style-type: none;
+}
+
+.task-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    background-color: rgba(248, 248, 248, 0.8);
+    width: 100%;
+}
+
+.task-text {
+    margin-right: 2rem;
+    font-size: 1rem;
+}
+
+.edit-button, .delete-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    font-size: 1rem;
+}
+
+.edit-button ion-icon {
+    color: #ffc107;
+}
+
+.edit-button:hover ion-icon {
+    color: #e0a800;
+}
+
+.delete-button ion-icon {
+    color: #dc3545;
+}
+
+.delete-button:hover ion-icon {
+    color: #c82333;
+}
+
+.score {
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: flex-end;
+}
