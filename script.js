@@ -135,9 +135,11 @@ toDoList.addEventListener('click', function(e) {
 });
 
 deleteAllButton.addEventListener('click', function() {
-    tasks = [];
-    saveTasks();
-    renderTasks();
+    if (confirm('Are you sure you want to delete all tasks?')) {
+        tasks = [];
+        saveTasks();
+        renderTasks();
+    }
 });
 
 themeToggleButton.addEventListener('click', function() {

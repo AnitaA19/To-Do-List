@@ -216,7 +216,7 @@ body.dark-theme .theme-toggle-button ion-icon[name="moon"] {
 
 .delete-all-button {
     padding: 0.5rem 1rem;
-    font-size: 1rem;
+    font-size: 0.8rem;
     background-color: #dc3545;
     color: white;
     border: none;
